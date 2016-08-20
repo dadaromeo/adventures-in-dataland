@@ -27,4 +27,4 @@ def count(arr):
     for elt in arr:
         tab[elt] += 1
     keys,vals = zip(*tab.items())    
-    return array(keys), array(vals)
+    return array(keys, dtype=int), array(vals)
