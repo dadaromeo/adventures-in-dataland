@@ -39,6 +39,7 @@ bug = {"Label": "Bug", "Color": "tomato"}
 canvas = CanvasGrid(food_portrayal, width, height)
 chart_count = ChartModule([bean, corn, soy, bug])
 
-server = ModularServer(Foraging, [canvas, chart_count], name="Foraging", strategy="stick")
+model_params = {"strategy": "stick"}
+server = ModularServer(Foraging, [canvas, chart_count], name="Foraging", model_params)
 
 server.launch()
